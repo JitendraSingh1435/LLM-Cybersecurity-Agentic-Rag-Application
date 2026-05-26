@@ -216,3 +216,16 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Virtual environment
+.venv/
+
+# Large model embeddings and datasets
+embeddings/
+
+# FAISS Vector Stores
+vectorstore/
+vectorstore1/
+
+# Local environment secrets
+.env
