@@ -217,9 +217,6 @@ __marimo__/
 # Streamlit
 .streamlit/secrets.toml
 
-# Virtual environment
-.venv/
-
 # Large model embeddings and datasets
 embeddings/
 
@@ -227,5 +224,4 @@ embeddings/
 vectorstore/
 vectorstore1/
 
-# Local environment secrets
-.env
+
