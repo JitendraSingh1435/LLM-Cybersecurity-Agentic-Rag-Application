@@ -1,0 +1,103 @@
+body {
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+/* Glow Effects */
+
+.glow {
+    position: fixed;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    filter: blur(120px);
+    z-index: -1;
+}
+
+.glow1 {
+    background: #7c3aed;
+    top: -100px;
+    left: -100px;
+}
+
+.glow2 {
+    background: #2563eb;
+    bottom: -100px;
+    right: -100px;
+}
+
+/* Glass Card */
+
+.glass-card {
+
+    background: rgba(17, 24, 39, 0.7);
+
+    border: 1px solid rgba(255,255,255,0.08);
+
+    backdrop-filter: blur(16px);
+
+    border-radius: 28px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 8px 32px rgba(0,0,0,0.4);
+
+}
+
+/* Header */
+
+.panel-header {
+
+    padding: 20px;
+
+    font-size: 24px;
+
+    font-weight: bold;
+
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.blue {
+    color: #60a5fa;
+}
+
+.purple {
+    color: #c084fc;
+}
+
+/* Content */
+
+.panel-content {
+
+    min-height: 550px;
+
+    padding: 25px;
+
+    line-height: 1.8;
+
+    overflow-y: auto;
+}
+
+/* Markdown Styling */
+.markdown-content p {
+    margin-bottom: 1em;
+}
+
+.markdown-content ul, .markdown-content ol {
+    margin-left: 20px;
+    margin-bottom: 1em;
+}
+
+.markdown-content ul {
+    list-style-type: disc;
+}
+
+.markdown-content ol {
+    list-style-type: decimal;
+}
+
+.markdown-content strong {
+    font-weight: bold;
+    color: #e2e8f0;
+}

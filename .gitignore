@@ -217,11 +217,20 @@ __marimo__/
 # Streamlit
 .streamlit/secrets.toml
 
-# Large model embeddings and datasets
-embeddings/
-
 # FAISS Vector Stores
 vectorstore/
 vectorstore1/
 
+# Ignore the entire local models directory
+emb_model/
+
+# Raw Ingestion Data and Documents
+data/
+
+# Local developer scratchpads & history
+commands.txt
+questions.txt
+
+# Editor-specific settings
+.vscode/
 
