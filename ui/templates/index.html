@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cybersecurity RAG System</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Marked.js for Markdown -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="/static/style.css">
+
+</head>
+
+<body class="bg-[#020617] text-white min-h-screen overflow-x-hidden">
+
+    <!-- Background Glow Effects -->
+    <div class="glow glow1"></div>
+    <div class="glow glow2"></div>
+
+    <!-- Navbar -->
+    <nav class="w-full border-b border-gray-800 backdrop-blur-md bg-[#020617]/80 sticky top-0 z-50">
+
+        <div class="max-w-7xl mx-auto px-8 py-5 flex items-center justify-between">
+
+            <!-- Title -->
+            <h1 class="text-3xl font-bold text-purple-400 tracking-wide">
+                Cybersecurity RAG
+            </h1>
+
+            <!-- Subtitle -->
+            <span class="text-gray-400 text-sm md:text-base">
+                Standard RAG vs Agentic RAG
+            </span>
+
+        </div>
+
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="text-center mt-10 px-4">
+
+        <h2 class="text-5xl font-extrabold leading-tight">
+            AI Powered Cybersecurity Assistant
+        </h2>
+
+        <p class="text-gray-400 mt-4 text-lg">
+            Compare Traditional RAG with Advanced Agentic RAG
+        </p>
+
+    </section>
+
+    <!-- Search Section -->
+    <section class="flex justify-center mt-10 px-5">
+
+        <div class="w-full max-w-6xl flex flex-col md:flex-row gap-4">
+
+            <!-- Input -->
+            <input
+                id="questionInput"
+                type="text"
+                placeholder="Ask a cybersecurity question..."
+                class="
+                    flex-1
+                    bg-[#111827]
+                    border
+                    border-gray-700
+                    rounded-2xl
+                    p-5
+                    text-lg
+                    outline-none
+                    focus:border-purple-500
+                    transition-all
+                "
+            >
+
+            <!-- Model Select -->
+            <select
+                id="modelSelect"
+                class="
+                    bg-[#111827]
+                    border
+                    border-gray-700
+                    rounded-2xl
+                    p-5
+                    text-lg
+                    text-white
+                    cursor-pointer
+                    outline-none
+                    focus:border-purple-500
+                    transition-all
+                "
+            >
+                <option value="ollama">Ollama (Mistral)</option>
+                <option value="gemini">Gemini (Pro)</option>
+            </select>
+
+            <!-- Button -->
+            <button
+                onclick="askQuestion()"
+                class="
+                    bg-purple-600
+                    hover:bg-purple-700
+                    transition-all
+                    px-10
+                    py-5
+                    rounded-2xl
+                    font-semibold
+                    shadow-lg
+                    shadow-purple-900/40
+                "
+            >
+                Ask
+            </button>
+
+        </div>
+
+    </section>
+
+    <!-- Split Panels -->
+    <section class="grid grid-cols-1 lg:grid-cols-2 gap-8 p-6 lg:p-10">
+
+        <!-- Standard RAG Panel -->
+        <div class="glass-card">
+
+            <!-- Header -->
+            <div class="panel-header border-b border-gray-800">
+
+                <div class="flex items-center justify-between">
+
+                    <h3 class="text-2xl font-bold text-blue-400">
+                        Standard RAG
+                    </h3>
+
+                    <span class="text-sm text-gray-400">
+                        Baseline Retrieval
+                    </span>
+
+                </div>
+
+            </div>
+
+            <!-- Content -->
+            <div
+                id="ragAnswer"
+                class="panel-content"
+            >
+                <!-- Waiting for query... -->
+            </div>
+
+        </div>
+
+        <!-- Agentic RAG Panel -->
+        <div class="glass-card">
+
+            <!-- Header -->
+            <div class="panel-header border-b border-gray-800">
+
+                <div class="flex items-center justify-between">
+
+                    <h3 class="text-2xl font-bold text-purple-400">
+                        Agentic RAG
+                    </h3>
+
+                    <span class="text-sm text-gray-400">
+                        Multi-step Reasoning
+                    </span>
+
+                </div>
+
+            </div>
+
+            <!-- Content -->
+            <div
+                id="agenticAnswer"
+                class="panel-content"
+            >
+                <!-- Waiting for query... -->
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center text-gray-500 text-sm py-6">
+
+        Built using FastAPI + Uvicorn + Tailwind CSS + JavaScript
+
+    </footer>
+
+    <!-- External JS -->
+    <script src="/static/script.js?v=4"></script>
+
+</body>
+
+</html>
