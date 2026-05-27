@@ -39,6 +39,7 @@ This project compares Standard RAG and Agentic RAG architectures to evaluate imp
 
 This repository features a comprehensive library of curated reference materials, official standards, and textbooks covering cybersecurity, penetration testing, and digital forensics. Total 65 books are used for knowledge base which includes:
 
+
 ### 🎓 Professional Certifications & Guides
 * **CISSP All-In-One Exam Guide (8th Edition)** – Comprehensive coverage of the CISSP domains.
 * **CISSP Study Guide (3rd Edition)** – Core concepts and preparation strategy for the examination.
@@ -68,6 +69,14 @@ This repository features a comprehensive library of curated reference materials,
 * **Applied Cryptography (2nd Edition)** (Bruce Schneier) – The definitive textbook on cryptographic protocols.
 * **Cryptography and Network Security (6th Edition)** (William Stallings) – Principles and practice of network encryption.
 * **Introduction to Cyber Security** – Fundamental building blocks of modern information defense systems.
+
+## 📚 Project Data
+
+The raw cybersecurity books (`804 MB`) are too large to host directly on GitHub. 
+
+- Download the dataset from this [Raw data](https://mega.nz/folder/HTBT0A4Y#fFvXSrdUohfay9KcwPfSqA).
+
+- Extract or place the files into the `data/raw/books/` directory before running the data ingestion scripts.
 
 ## 🧰 Tech Stack
 
@@ -188,6 +197,38 @@ User Query ──> Retrieval ──> Multi-Query ──> Generation ──> Fina
 ```
 
 
+
+
+## 📁 Project Structure
+
+Below is an overview of the directory layout and the core components of the repository:
+
+```text
+Project Implementation/
+│
+├── 📁 .vscode/                  # Editor configuration (settings.json)
+├── 📁 agentic_rag/              # Modules and chains for the Agentic RAG implementation
+├── 📁 config/                   # Global configuration and setting parameters (settings.py)
+├── 📁 data/                     # Data storage split into raw sources and processed datasets
+│   ├── 📁 processed/
+│   └── 📁 raw/
+├── 📁 data_ingestion/           # Scripts for document parsing, chunking, and database building
+├── 📁 embeddings/               # Local embedding models management
+│   ├── 📁 emb_model/            # Downloaded model weights (MiniLM, Nomic)
+│   └── 📄 embedding_model.py    # Embedding generation logic
+├── 📁 evaluation/               # Evaluation scripts and benchmarks for RAG performance
+├── 📁 standard_rag/             # Baseline Simple RAG pipeline implementation
+├── 📁 ui/                       # Frontend interface and FastAPI backend routes
+├── 📁 utils/                    # Shared utility tools, helpers, and logging setups
+├── 📁 vectorstore/              # Primary production FAISS vector database storage
+├── 📁 vectorstore1/             # Secondary or backup vector store storage
+│
+├── 📄 .env                      # Local environment variables and private API keys
+├── 📄 .gitignore                # Specifies intentionally untracked files to ignore
+├── 📄 main.py                   # Main entry point for the interactive Terminal CLI
+├── 📄 README.md                 # Project documentation and setup guide
+└── 📄 requirements.txt          # List of Python package dependencies
+```
 
 
 ## 🚀 Run Application
